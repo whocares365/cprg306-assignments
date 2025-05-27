@@ -25,17 +25,21 @@ export default function NewItem(){
         }
     }
 
-    let decrementButtonStyle = "bg-blue-900 m-2 py-1 px-2 border-solid border-1 border-cyan-500 rounded-md w-8";
-    if (quantity == 1) {
-        decrementButtonStyle = " w-8 text-black bg-gray-400 m-2 py-1 px-2 border-solid border-1 border-cyan-500 rounded-md";
+    const reset = () => {
+        setQuantity(1);
     }
-    let incrementButtonStyle = "bg-blue-900 m-2 py-1 px-2 border-solid border-1 border-cyan-500 rounded-md w-8";
+
+    let decrementButtonStyle = "bg-blue-900 mr-2 py-1 px-2 border-solid border-1 border-cyan-500 rounded-md w-8";
+    if (quantity == 1) {
+        decrementButtonStyle = " w-8 text-black bg-gray-400 mr-2 py-1 px-2 border-solid border-1 border-cyan-500 rounded-md";
+    }
+    let incrementButtonStyle = "bg-blue-900 ml-2 py-1 px-2 border-solid border-1 border-cyan-500 rounded-md w-8";
     if (quantity == 20) {
-        incrementButtonStyle = " w-8 text-black bg-gray-400 m-2 py-1 px-2 border-solid border-1 border-cyan-500 rounded-md";
+        incrementButtonStyle = " w-8 text-black bg-gray-400 ml-2 py-1 px-2 border-solid border-1 border-cyan-500 rounded-md";
     }
 
     return (
-        <div className="m-auto text-center my-8 bg-slate-900 py-3 w-40 border-solid border-2 border-cyan-500 rounded-md">
+        <div className="m-auto text-center my-8 bg-slate-900 py-3 w-50 border-solid border-2 border-cyan-500 rounded-md">
             <button 
                 className={decrementButtonStyle }
                 onClick={decrement}>
@@ -49,7 +53,11 @@ export default function NewItem(){
                 onClick={increment}>
                 +
             </button>
-
+            <button
+                className="bg-blue-900 mt-2 py-1 px-2 border-solid border-1 border-cyan-500 rounded-md w-28"
+                onClick={reset}>
+                Reset
+            </button>
         </div>
     );
 }

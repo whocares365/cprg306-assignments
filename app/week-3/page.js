@@ -5,7 +5,7 @@ import { mainStyle } from "../_utils/style-vars";
 
 export default function Page() {
     return (
-        <main className= { mainStyle } >
+        <main className="flex-column bg-sky-950 text-white anchor:text-white p-3" >
             <ShoppingList />
             <BackButton />
             <br/><ItemList />
