@@ -1,0 +1,1 @@
+export let mainStyle = "h-screen flex-column bg-sky-950 text-white anchor:text-white p-3";

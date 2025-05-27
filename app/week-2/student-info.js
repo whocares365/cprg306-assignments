@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export default function StudentInfo() {
     return(
-        <div className=" flex my-8 bg-slate-900 p-3 w-55 border-solid border-2 border-cyan-500 rounded-md">
+        <div className=" flex my-8 bg-slate-900 py-3 w-60 border-solid border-2 border-cyan-500 rounded-md">
             <div className="text-right flex-1">
                 Name:
                 <br/>Student ID:
-                <br/>GitHub:
+                <br/>GitHub Link:
             </div>
             <div className="flex-1 mx-2">
                 Sasha
