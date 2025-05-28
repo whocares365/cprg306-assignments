@@ -11,8 +11,6 @@ export default function NewItem(){
         let currentQuantity = quantity;
         if (currentQuantity < 20) {
             setQuantity(currentQuantity + 1);
-        } else {
-            
         }
     }
 
@@ -20,8 +18,6 @@ export default function NewItem(){
         let currentQuantity = quantity;
         if (currentQuantity > 1){
             setQuantity(currentQuantity - 1);
-        } else {
-            decrementButtonStyle = "bg-gray-400 m-2 py-1 px-2 border-solid border-1 border-cyan-500 rounded-md";
         }
     }
 
@@ -29,11 +25,15 @@ export default function NewItem(){
         setQuantity(1);
     }
 
-    let decrementButtonStyle = "bg-blue-900 mr-2 py-1 px-2 border-solid border-1 border-cyan-500 rounded-md w-8";
+    let resetStyle = "bg-gray-400 text-black mt-2 py-1 px-2 border-solid border-1 border-cyan-500 rounded-md w-28";
+    if (quantity > 1) {
+        resetStyle = "bg-blue-900 hover:bg-blue-700 mt-2 py-1 px-2 border-solid border-1 border-cyan-500 rounded-md w-28";
+    }
+    let decrementButtonStyle = "bg-blue-900 hover:bg-blue-700 mr-2 py-1 px-2 border-solid border-1 border-cyan-500 rounded-md w-8";
     if (quantity == 1) {
         decrementButtonStyle = " w-8 text-black bg-gray-400 mr-2 py-1 px-2 border-solid border-1 border-cyan-500 rounded-md";
     }
-    let incrementButtonStyle = "bg-blue-900 ml-2 py-1 px-2 border-solid border-1 border-cyan-500 rounded-md w-8";
+    let incrementButtonStyle = "bg-blue-900 hover:bg-blue-700 ml-2 py-1 px-2 border-solid border-1 border-cyan-500 rounded-md w-8";
     if (quantity == 20) {
         incrementButtonStyle = " w-8 text-black bg-gray-400 ml-2 py-1 px-2 border-solid border-1 border-cyan-500 rounded-md";
     }
@@ -42,11 +42,12 @@ export default function NewItem(){
         <div className="m-auto text-center my-8 bg-slate-900 py-3 w-50 border-solid border-2 border-cyan-500 rounded-md">
             <button 
                 className={decrementButtonStyle }
-                onClick={decrement}>
+                onClick={decrement}
+                >
                 -
             </button>
 
-            <p className="inline-block text-black text-right bg-white p-1 rounded w-8">{quantity}</p>
+            <p className="inline-block text-black text-center bg-white p-1 rounded w-8">{quantity}</p>
 
             <button 
                 className={incrementButtonStyle} 
@@ -54,7 +55,7 @@ export default function NewItem(){
                 +
             </button>
             <button
-                className="bg-blue-900 mt-2 py-1 px-2 border-solid border-1 border-cyan-500 rounded-md w-28"
+                className={resetStyle}
                 onClick={reset}>
                 Reset
             </button>

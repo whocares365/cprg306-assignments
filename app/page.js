@@ -10,7 +10,6 @@ export default function Home() {
         <AssignmentList />
         <PracticeList />
       </div>
-      
     </main>
     );
 }
