@@ -44,7 +44,7 @@ export default function NewItem(){
     } 
 
     //Button Styling 
-    const activeButton = "bg-blue-900 text-white w-7 h-7 m-1 rounded hover:bg-blue-950";
+    const activeButton = "bg-blue-900 text-white w-7 h-7 m-1 rounded hover:bg-blue-800";
     const greyedButton = "bg-gray-500 text-white w-7 h-7 m-1 rounded"
 
     let plusButton;
@@ -98,7 +98,7 @@ export default function NewItem(){
                 onChange={handleCategoryChange}
                 className="w-40 h-11 bg-white rounded-md text-black border-2 border-gray-600"
                 >
-                    <option disabled value="false" className="bg-gray-300 text-white p-2">Category</option>
+                    <option disabled value="false" className="bg-gray-300 text-white text-center p-2">--Category--</option>
                     <option value="produce">Produce</option>
                     <option value="dairy">Dairy</option>
                     <option value="bakery">Bakery</option>
@@ -115,7 +115,7 @@ export default function NewItem(){
                 <div>
                     <button
                         type="submit"
-                        className="mt-2 w-72 h-10 bg-blue-900 hover:bg-blue-950 rounded-md border-1 border-cyan-700"
+                        className="mt-2 w-72 h-10 bg-blue-900 hover:bg-blue-800 rounded-md border-1 border-cyan-700"
                         >
                         +
                     </button>
