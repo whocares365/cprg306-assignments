@@ -11,6 +11,10 @@ export default function PracticeList() {
                 <br/>
                 Week 5: &nbsp;
                 <PracticeLink link="./week-5/week-5-practice/" practice={"Managed Form"} />
+                <br/>
+                Week 6: &nbsp;
+                <PracticeLink link="./week-6/arrays/" practice={"Arrays"} />
+                <PracticeLink link="./week-6/contact/" practice={"Contact"} />
             </p>
             
         </div>

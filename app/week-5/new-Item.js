@@ -9,7 +9,6 @@ export default function NewItem(){
     const [category, setCategory] = useState("produce");
 
     const handleNameChange = (event) => setName(event.target.value);
-    const handleQuantityChange = (event) => setQuantity(event.target.value);
     const handleCategoryChange = (event) => setCategory(event.target.value);
 
     // functions increase/ decrease / handle submit

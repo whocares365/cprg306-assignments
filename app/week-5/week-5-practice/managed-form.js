@@ -13,8 +13,8 @@ export default function RegistrationForm() {
     const [subscription, setSubscription] = useState("");
     const [message, setMessage] = useState("");
 
-    const handleMessageChange = () => setMessage(event.target.value);
-    const subscriptionChange = () => setSubscription(event.target.value);
+    const handleMessageChange = (event) => setMessage(event.target.value);
+    const subscriptionChange = (event) => setSubscription(event.target.value);
     const handleFullNameChange = (event) => {
         console.dir(event.target.value);
         setFullName(event.target.value);
