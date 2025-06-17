@@ -1,10 +1,10 @@
 export default function Item({name, quantity, category, sortType}) {
-    const itemStyle = "bg-slate-900 my-4 mx-2 p-2 w-80 border-solid border-2 border-cyan-500 rounded-md";
+    const itemStyle = "p-0.5 bg-cyan-500 my-4 mx-2 w-50 rounded-md";
 
     return(
         <li className={itemStyle}>
-                <p>{name}</p>
-                <p>Buy {quantity} in {category}</p>
-            </li>
+            <p className="mb-0.5 pl-2 pt-1 rounded-md bg-slate-900 ">{name}</p>
+            <p className="pl-2 pt-1 rounded-md bg-slate-900 ">Buy {quantity} in {category}</p>
+        </li>
     );
 }

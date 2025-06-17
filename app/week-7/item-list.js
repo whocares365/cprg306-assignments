@@ -1,14 +1,13 @@
 "use client";
 
-import Item from "./item";
+import Item from "../week-6/item";
 import { useState } from "react";
-import Grocery from "./items.json"
 
-export default function ItemsList() {
+export default function ItemsList({grocery}) {
 
     const [sortBy, setSortBy] = useState("name")
 
-    Grocery.sort( (a, b) => {
+    grocery.sort( (a, b) => {
         let ItemA = a[sortBy].toUpperCase();
         let ItemB = b[sortBy].toUpperCase();
         if (ItemA < ItemB) return -1;
@@ -47,7 +46,7 @@ export default function ItemsList() {
                 <button type="button" disabled className="bg-gray-400 text-black rounded-md pr-2 pl-2">Group by Category</button>
             </section>
             <ul>
-                {Grocery.map( (item) => 
+                {grocery.map( (item) => 
                 <Item key={item.id} name={item.name} quantity={item.quantity} category={item.category} sortType={sortBy}/>)}
             </ul>
         </div>

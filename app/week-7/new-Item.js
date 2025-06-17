@@ -1,12 +1,14 @@
 "use client";
 import { useState } from "react";
 
-export default function NewItem(){
+export default function NewItem({onAddItem}){
 
     // UseState Hooks
     const [name, setName] = useState("");
     const [quantity, setQuantity] = useState(1);
     const [category, setCategory] = useState("produce");
+    const [groceryID, setGroceryID] = useState(0);
+    
 
     const handleNameChange = (event) => setName(event.target.value);
     const handleCategoryChange = (event) => setCategory(event.target.value);
@@ -29,14 +31,19 @@ export default function NewItem(){
     const handleSubmit = (event) => {
         event.preventDefault();
 
+        setGroceryID(groceryID + 1);
+
         const item = {
-            prodName : name,
-            qty : quantity,
-            prodCat: category
+            "id": groceryID.toString(),
+            "name" : name,
+            "quantity" : quantity,
+            "category": category
         };
 
-        alert(`${item.qty} ${item.prodName}${item.qty > 1 ? "s":""} from ${item.prodCat} category added to your cart!`);
+        onAddItem(item);
 
+        console.log(`${item.qty} ${item.name} from ${item.prodCat} category was added to your cart!`);
+        
         setName("");
         setQuantity(1);
         setCategory("produce");
@@ -102,9 +109,9 @@ export default function NewItem(){
                     <option value="dairy">Dairy</option>
                     <option value="bakery">Bakery</option>
                     <option value="meat">Meat</option>
-                    <option value="frozen">Frozen Foods</option>
-                    <option value="canned">Canned Goods</option>
-                    <option value="dry">Dry Goods</option>
+                    <option value="frozen goods">Frozen Foods</option>
+                    <option value="canned goods">Canned Goods</option>
+                    <option value="dry goods">Dry Goods</option>
                     <option value="beverages">Beverages</option>
                     <option value="snacks">Snacks</option>
                     <option value="household">Household</option>
