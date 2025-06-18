@@ -4,7 +4,7 @@ export default function Item({name, quantity, category, sortType}) {
     return(
         <li className={itemStyle}>
             <p className="mb-0.5 pl-2 pt-1 rounded-md bg-slate-900 ">{name}</p>
-            <p className="pl-2 pt-1 rounded-md bg-slate-900 ">Buy {quantity} in {category}</p>
+            <p className="ml-1.5 text-black">Buy {quantity} in {category}</p>
         </li>
     );
 }

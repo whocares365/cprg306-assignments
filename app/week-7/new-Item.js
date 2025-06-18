@@ -50,7 +50,7 @@ export default function NewItem({onAddItem}){
     } 
 
     //Button Styling 
-    const activeButton = "bg-blue-900 text-white w-7 h-7 m-1 rounded hover:bg-blue-800";
+    const activeButton = "bg-cyan-500 text-white w-7 h-7 m-1 rounded hover:bg-slate-800";
     const greyedButton = "bg-gray-500 text-white w-7 h-7 m-1 rounded"
 
     let plusButton;
@@ -121,7 +121,7 @@ export default function NewItem({onAddItem}){
                 <div>
                     <button
                         type="submit"
-                        className="mt-2 w-72 h-10 bg-blue-900 hover:bg-blue-800 rounded-md border-1 border-cyan-700"
+                        className="mt-2 w-72 h-10 bg-cyan-500 hover:bg-slate-800 rounded-md border-1 border-white"
                         >
                         +
                     </button>
