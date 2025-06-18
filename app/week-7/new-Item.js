@@ -70,7 +70,7 @@ export default function NewItem({onAddItem}){
 
 
     return (
-        <div className="ml-10 text-center my-8 bg-slate-900 p-5 w-85 h-46 border-solid border-3 border-cyan-500 rounded-md">
+        <div className="mt-18 text-center my-8 bg-slate-900 p-5 w-85 h-46 border-solid border-3 border-cyan-500 rounded-md">
             <form onSubmit={handleSubmit}>
                 <input 
                 type="text"
