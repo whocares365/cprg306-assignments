@@ -16,7 +16,7 @@ export default function ItemsList({grocery}) {
     })
 
     const clickedButtonStyle = "bg-slate-800 rounded-md border-2 border-black pl-2 pr-2 mr-2";
-    const buttonStyle = "bg-cyan-500 rounded-md border-2 border-black pl-2 pr-2 mr-2 hover:bg-slate-800";
+    const buttonStyle = "bg-cyan-500 rounded-md border-2 border-black pl-2 pr-2 mr-2 hover:bg-slate-600";
 
     let nameButton;
     let categoryButton;

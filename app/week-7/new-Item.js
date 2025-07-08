@@ -50,7 +50,7 @@ export default function NewItem({onAddItem}){
     } 
 
     //Button Styling 
-    const activeButton = "bg-cyan-500 text-white w-7 h-7 m-1 rounded hover:bg-slate-800";
+    const activeButton = "bg-cyan-500 text-white w-7 h-7 m-1 rounded hover:bg-slate-600";
     const greyedButton = "bg-gray-500 text-white w-7 h-7 m-1 rounded"
 
     let plusButton;
@@ -70,7 +70,7 @@ export default function NewItem({onAddItem}){
 
 
     return (
-        <div className="mt-18 text-center my-8 bg-slate-900 p-5 w-85 h-46 border-solid border-3 border-cyan-500 rounded-md">
+        <div className="mt-17 text-center my-8 bg-slate-900 p-5 w-85 h-46 border-solid border-3 border-cyan-500 rounded-md">
             <form onSubmit={handleSubmit}>
                 <input 
                 type="text"
@@ -121,7 +121,7 @@ export default function NewItem({onAddItem}){
                 <div>
                     <button
                         type="submit"
-                        className="mt-2 w-72 h-10 bg-cyan-500 hover:bg-slate-800 rounded-md border-1 border-white"
+                        className="mt-2 w-72 h-10 bg-cyan-500 hover:bg-slate-600 rounded-md border-1 border-white"
                         >
                         +
                     </button>

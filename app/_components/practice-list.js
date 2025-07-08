@@ -18,6 +18,9 @@ export default function PracticeList() {
                 <br/>
                 Week 7: &nbsp;
                 <PracticeLink link="./week-7/week-7-practice/" practice={"Managing State"}/>
+                <br/>
+                Week 8: &nbsp;
+                <PracticeLink link="./week-8/week-8-practice/" practice={"Fetching Data"}/>
             </p>
             
         </div>
