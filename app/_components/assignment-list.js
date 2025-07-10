@@ -11,8 +11,8 @@ export default function AssignmentList({ name, link }) {
             <li><AssignmentLink link="./week-6" week={6} /></li>
             <li><AssignmentLink link="./week-7" week={7} /></li>
             <li><AssignmentLink link="./week-8" week={8} /></li>
+            <li><AssignmentLink link="./week-9/" week={9} /></li>
             <br/><p className="text-cyan-600 font-bold text-xl">Coming Soon:</p>
-            <li>Week 9</li>
             <li>Week 10</li>
         </ul>
     );
